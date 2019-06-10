@@ -45,6 +45,7 @@ class Median:
             a = sigmoid(np.dot(w, a) + b)
         return a
 
+    # Option for saving
     def save(self, file_str):
         file = open(file_str, "w")
         file.write(str(self.biases))
