@@ -2,6 +2,8 @@
 
 Smart Sheep is a simple genetic algorithm implementation with graphic user interface. The project, using machine learning and neural networks, teaches sheep to survive. 
 
+![Testing](wallpaper_Small.png)
+
 ## Basic Overview 
 
 Smart Sheep is a highschool project for exam in informatics. [Original version](https://github.com/urhprimozic/inf_skg), written in Slovene, was translated into English.  
