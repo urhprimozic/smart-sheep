@@ -1,5 +1,6 @@
 import random
 import numpy as np
+from settings import *
 
 """Thanks to Micheal A. Nielsen, "Neural Networks and Deep Learning,
 Determination Press,2015"""
@@ -45,7 +46,48 @@ class Median:
             a = sigmoid(np.dot(w, a) + b)
         return a
 
-    # Option for saving
+    # Depreciated function. Saves current net to a file.
+    def save(self, file_str):
+        file = open(file_str, "w")
+        file.write(str(self.biases))
+        file.write(str(self.weights))
+        file.close()
+
+
+class Cross_over:
+    def __init__(self, sizes, parent1=None, parent2=None):
+        self.num_layers = len(sizes)
+        self.num_layers = len(sizes)
+        self.sizes = sizes
+        self.biases = [np.random.rand(y, 1) for y in sizes[1:]]
+        self.weights = [np.random.rand(y, x) for x, y in zip(sizes[:-1], sizes[1:])]
+        if parent1 is not None:
+            for i in range(len(self.biases)):
+                for j in range(len(self.biases[i])):
+                    if random.randint(1, mutation_props) == mutation_props:
+                        self.biases[i][j][0] = np.random.rand(1, 1)
+                    else:
+                        if random.randint(0, 1) == 0:
+                            self.biases[i][j][0] = parent1.biases[i][j][0]
+                        else:
+                            self.biases[i][j][0] = parent2.biases[i][j][0]
+
+            for i in range(len(self.weights)):
+                for j in range(len(self.weights[i])):
+                    for k in range(len(self.weights[i][j])):
+                        if random.randint(1, mutation_props) == mutation_props:
+                            self.weights[i][j][k] = np.random.rand(1, 1)
+                        else:
+                            if random.randint(0, 1) == 0:
+                                self.weights[i][j][k] = parent1.weights[i][j][k]
+                            else:
+                                self.weights[i][j][k] = parent2.weights[i][j][k]
+
+    def feed_forward(self, a):
+        for b, w in zip(self.biases, self.weights):
+            a = sigmoid(np.dot(w, a) + b)
+        return a
+
     def save(self, file_str):
         file = open(file_str, "w")
         file.write(str(self.biases))

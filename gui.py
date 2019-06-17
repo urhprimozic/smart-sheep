@@ -1,4 +1,4 @@
-# this is not used to make Object-oriented game engien from pygame
+# this is not used to make Object-oriented game engine from pygame
 # it just makes the coding later on shorter
 import pygame
 import os
@@ -30,7 +30,7 @@ class Object:
         self.mask.x = x
         self.mask.y = y - self.mask.height  # *
         self.alive = True
-        self.hunger = 0
+        self.hunger = 0.0
         self.vy = 0
 
     def animate(self):
@@ -51,7 +51,7 @@ class Object:
 
     def kill(self):
         self.alive = False
-        self.move_to(settings.width + 1, settings.height + 1)
+        self.move_to(-settings.width, -settings.height)
 
     def render(self, screen):
         screen.blit(self.surfaces[self.surface_counter], self.mask)

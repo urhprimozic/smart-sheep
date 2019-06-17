@@ -1,20 +1,22 @@
 # Neural net. Every element represent a new layer, and its value number of neurons in that layer.
 # Output layer should have the value of 2
-net = [2, 3, 2]
+net_size = [2, 3, 2]
 # number of sheeps in one generation
-generation_size = 800
+# generation_size = 800
 # value of 1 eaten package of food (for the fitness function)
-food_value = 1000
+food_value = 10
 # value of 1 step staying alive (for the fitness function)
-step_value = 0.001
+step_value = 0
+# value ... when jumping over a wolf
+wolf_value = 100
 # gravitational acceleration
 g = 1
 # wolf's speed
 wolf_speed = -10
 # speed for food packages
-food_speed = -8
+food_speed = -10
 # acceleration when jumping (F/m)
-sheep_jump = -18
+sheep_jump = -19
 # speed of animation
 anime_speed = 2
 # window sizes
@@ -35,6 +37,8 @@ food_spawn_chance = 90
 # chance of new wolf spawning ^1
 wolf_spawn_chance = 55
 # hunger, that kills a speeh
-max_hunger = 10000
+max_hunger = 1000
 # value, by which hunger is raised every step
 hunger_value = 0.1
+# chance of mutation ^ 1
+mutation_props = 50
