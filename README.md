@@ -49,5 +49,3 @@ Feel free to use the code or contribute. For collaboration, @ me.
 
 Special thanks to Micheal A. Nielsen, "Neural Networks and Deep Learning, 
 Determination Press,2015 
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)  
