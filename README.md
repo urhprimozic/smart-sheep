@@ -19,6 +19,9 @@ python3 -m pip install -U pygame --user
 ``` 
 Project is not yet on pip, therefore options are downloading or cloning. 
 
+## User interface
+Run [smart_sheep](smart_sheep.py) and use buttons on the screen.
+
 ## Layout 
 
 [net][net.py] includes classes for neural networks. In [settings](settings.py) are global variables. [gui](gui.py) is just a helping script, that makes programming with pygame easier. [smart_sheep](smart_sheep.py) includes genetic algorithm implementation and GUI implementation. 
