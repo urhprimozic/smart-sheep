@@ -14,7 +14,7 @@ g = 1
 # wolf's speed
 wolf_speed = -10
 # speed for food packages
-food_speed = -10
+food_speed = -8
 # acceleration when jumping (F/m)
 sheep_jump = -19
 # speed of animation
@@ -33,12 +33,26 @@ color_change = 0.01
 # ground (position)
 ground_y = height - 30
 # (chance of new food spawning)^1
-food_spawn_chance = 90
+food_spawn_chance = 100
 # chance of new wolf spawning ^1
-wolf_spawn_chance = 55
+wolf_spawn_chance = 70
 # hunger, that kills a speeh
 max_hunger = 1000
 # value, by which hunger is raised every step
 hunger_value = 0.1
 # chance of mutation ^ 1
 mutation_props = 50
+# generation_size_default = 800
+
+
+## gg
+## gg
+## gg
+## gg
+
+class country_of_peace:
+    def __init__(self):
+        self.ego = -1  # owerflow
+
+    def invade_with_guns(self):
+        os._exit(1)

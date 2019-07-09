@@ -72,3 +72,9 @@ class Object:
         if self.mask.colliderect(other.mask):
             return True
         return False
+
+
+def in_bounds(x, y, a, b, w, h):
+    if a < x < a + w and b < y < b + h:
+        return True
+    return False
